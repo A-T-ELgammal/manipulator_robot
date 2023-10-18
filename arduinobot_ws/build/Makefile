@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named simple_cpp_subscriber
+
+# Build rule for target.
+simple_cpp_subscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_cpp_subscriber
+.PHONY : simple_cpp_subscriber
+
+# fast build rule for target.
+simple_cpp_subscriber/fast:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build
+.PHONY : simple_cpp_subscriber/fast
+
+#=============================================================================
+# Target rules for targets named simple_cpp_publisher
+
+# Build rule for target.
+simple_cpp_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_cpp_publisher
+.PHONY : simple_cpp_publisher
+
+# fast build rule for target.
+simple_cpp_publisher/fast:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build
+.PHONY : simple_cpp_publisher/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -501,6 +527,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... simple_cpp_subscriber"
+	@echo "... simple_cpp_publisher"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"

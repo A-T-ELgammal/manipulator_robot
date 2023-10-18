@@ -191,6 +191,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/DependInfo.cmake"
+  "arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/DependInfo.cmake"
   "arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "arduinobot_pub_sub/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"

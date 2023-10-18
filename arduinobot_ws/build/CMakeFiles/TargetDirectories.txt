@@ -39,6 +39,8 @@
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/rebuild_cache.dir
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/edit_cache.dir
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/test.dir
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_pub_sub/CMakeFiles/roscpp_generate_messages_cpp.dir

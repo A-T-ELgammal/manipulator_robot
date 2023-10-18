@@ -79,7 +79,8 @@ clean: arduinobot_pub_sub/clean
 # Directory level rules for directory arduinobot_pub_sub
 
 # Recursive "all" directory target.
-arduinobot_pub_sub/all:
+arduinobot_pub_sub/all: arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/all
+arduinobot_pub_sub/all: arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/all
 
 .PHONY : arduinobot_pub_sub/all
 
@@ -89,6 +90,8 @@ arduinobot_pub_sub/preinstall:
 .PHONY : arduinobot_pub_sub/preinstall
 
 # Recursive "clean" directory target.
+arduinobot_pub_sub/clean: arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/clean
+arduinobot_pub_sub/clean: arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/clean
 arduinobot_pub_sub/clean: arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 arduinobot_pub_sub/clean: arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 arduinobot_pub_sub/clean: arduinobot_pub_sub/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
@@ -407,6 +410,60 @@ gtest: gtest/googletest/CMakeFiles/gtest.dir/rule
 gtest/googletest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir
+
+# All Build rule for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/all:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/depend
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=11,12 "Built target simple_cpp_subscriber"
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/all
+
+# Build rule for subdir invocation for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles 0
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule
+
+# Convenience name for target.
+simple_cpp_subscriber: arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule
+
+.PHONY : simple_cpp_subscriber
+
+# clean rule for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/clean:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/clean
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/clean
+
+#=============================================================================
+# Target rules for target arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir
+
+# All Build rule for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/all:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/depend
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=9,10 "Built target simple_cpp_publisher"
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/all
+
+# Build rule for subdir invocation for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles 0
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule
+
+# Convenience name for target.
+simple_cpp_publisher: arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule
+
+.PHONY : simple_cpp_publisher
+
+# clean rule for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/clean:
+	$(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/clean
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/clean
 
 #=============================================================================
 # Target rules for target arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir

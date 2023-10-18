@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule
+
+# Convenience name for target.
+simple_cpp_subscriber: arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/rule
+
+.PHONY : simple_cpp_subscriber
+
+# fast build rule for target.
+simple_cpp_subscriber/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build
+.PHONY : simple_cpp_subscriber/fast
+
+# Convenience name for target.
+arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule
+.PHONY : arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule
+
+# Convenience name for target.
+simple_cpp_publisher: arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/rule
+
+.PHONY : simple_cpp_publisher
+
+# fast build rule for target.
+simple_cpp_publisher/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build
+.PHONY : simple_cpp_publisher/fast
+
+# Convenience name for target.
 arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : arduinobot_pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -392,6 +422,60 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arduinobot_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/simple_publisher.o: src/simple_publisher.cpp.o
+
+.PHONY : src/simple_publisher.o
+
+# target to build an object file
+src/simple_publisher.cpp.o:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/src/simple_publisher.cpp.o
+.PHONY : src/simple_publisher.cpp.o
+
+src/simple_publisher.i: src/simple_publisher.cpp.i
+
+.PHONY : src/simple_publisher.i
+
+# target to preprocess a source file
+src/simple_publisher.cpp.i:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/src/simple_publisher.cpp.i
+.PHONY : src/simple_publisher.cpp.i
+
+src/simple_publisher.s: src/simple_publisher.cpp.s
+
+.PHONY : src/simple_publisher.s
+
+# target to generate assembly for a file
+src/simple_publisher.cpp.s:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_publisher.dir/src/simple_publisher.cpp.s
+.PHONY : src/simple_publisher.cpp.s
+
+src/simple_subscriber.o: src/simple_subscriber.cpp.o
+
+.PHONY : src/simple_subscriber.o
+
+# target to build an object file
+src/simple_subscriber.cpp.o:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/src/simple_subscriber.cpp.o
+.PHONY : src/simple_subscriber.cpp.o
+
+src/simple_subscriber.i: src/simple_subscriber.cpp.i
+
+.PHONY : src/simple_subscriber.i
+
+# target to preprocess a source file
+src/simple_subscriber.cpp.i:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/src/simple_subscriber.cpp.i
+.PHONY : src/simple_subscriber.cpp.i
+
+src/simple_subscriber.s: src/simple_subscriber.cpp.s
+
+.PHONY : src/simple_subscriber.s
+
+# target to generate assembly for a file
+src/simple_subscriber.cpp.s:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/build.make arduinobot_pub_sub/CMakeFiles/simple_cpp_subscriber.dir/src/simple_subscriber.cpp.s
+.PHONY : src/simple_subscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +486,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... simple_cpp_subscriber"
+	@echo "... simple_cpp_publisher"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -420,6 +506,12 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/simple_publisher.o"
+	@echo "... src/simple_publisher.i"
+	@echo "... src/simple_publisher.s"
+	@echo "... src/simple_subscriber.o"
+	@echo "... src/simple_subscriber.i"
+	@echo "... src/simple_subscriber.s"
 .PHONY : help
 
 

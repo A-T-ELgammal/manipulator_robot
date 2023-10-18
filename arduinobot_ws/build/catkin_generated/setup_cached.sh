@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/ahmed/projects/manipulator_robot/arduinobot_ws/build'
 export ROSLISP_PACKAGE_DIRECTORIES='/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/ahmed/projects/manipulator_robot/arduinobot_ws/src:$ROS_PACKAGE_PATH"
