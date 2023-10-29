@@ -15,7 +15,8 @@
     </include>
 
 
-    <node pkg = "gazebo_ros" type = "spawn_model" name = "urdf_spawner" respawn = "false" output = "screen"
+    <node pkg = "gazebo_ros" type = "spawn_model" name = "urdf_spawner" 
+            respawn = "false" output = "screen"
               args = " -unpause -urdf -model robot -param robot_description " />
 
 </launch>

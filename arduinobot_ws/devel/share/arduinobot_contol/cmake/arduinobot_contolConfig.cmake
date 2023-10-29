@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(arduinobot_contol_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include " STREQUAL " ")
+if(NOT "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include;/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/include " STREQUAL " ")
   set(arduinobot_contol_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include")
+  set(_include_dirs "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include;/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -185,7 +185,7 @@ foreach(t ${arduinobot_contol_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "controller_manager;hardware_interface")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

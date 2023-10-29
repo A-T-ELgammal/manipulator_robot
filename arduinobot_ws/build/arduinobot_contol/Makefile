@@ -68,50 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -124,6 +80,40 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -134,6 +124,16 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,109 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+arduinobot_interface_node: arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : arduinobot_interface_node
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/build.make arduinobot_contol/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+arduinobot_interface_node/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/build
+.PHONY : arduinobot_interface_node/fast
 
 # Convenience name for target.
 arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/rule:
@@ -286,261 +196,6 @@ angles_converters_cpp: arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/ru
 angles_converters_cpp/fast:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/build.make arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/build
 .PHONY : angles_converters_cpp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_generate_messages_cpp: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
-
-.PHONY : arduinobot_contol_generate_messages_cpp
-
-# fast build rule for target.
-arduinobot_contol_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/build
-.PHONY : arduinobot_contol_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_genlisp: arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
-
-.PHONY : arduinobot_contol_genlisp
-
-# fast build rule for target.
-arduinobot_contol_genlisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/build
-.PHONY : arduinobot_contol_genlisp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_generate_messages: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
-
-.PHONY : arduinobot_contol_generate_messages
-
-# fast build rule for target.
-arduinobot_contol_generate_messages/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/build
-.PHONY : arduinobot_contol_generate_messages/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_geneus: arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
-
-.PHONY : arduinobot_contol_geneus
-
-# fast build rule for target.
-arduinobot_contol_geneus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/build
-.PHONY : arduinobot_contol_geneus/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arduinobot_contol/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
-
-# Convenience name for target.
-_arduinobot_contol_generate_messages_check_deps_AngleConvert: arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
-
-.PHONY : _arduinobot_contol_generate_messages_check_deps_AngleConvert
-
-# fast build rule for target.
-_arduinobot_contol_generate_messages_check_deps_AngleConvert/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/build.make arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/build
-.PHONY : _arduinobot_contol_generate_messages_check_deps_AngleConvert/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_generate_messages_eus: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
-
-.PHONY : arduinobot_contol_generate_messages_eus
-
-# fast build rule for target.
-arduinobot_contol_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/build
-.PHONY : arduinobot_contol_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_gencpp: arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
-
-.PHONY : arduinobot_contol_gencpp
-
-# fast build rule for target.
-arduinobot_contol_gencpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/build
-.PHONY : arduinobot_contol_gencpp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_gennodejs: arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
-
-.PHONY : arduinobot_contol_gennodejs
-
-# fast build rule for target.
-arduinobot_contol_gennodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/build
-.PHONY : arduinobot_contol_gennodejs/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_generate_messages_lisp: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
-
-.PHONY : arduinobot_contol_generate_messages_lisp
-
-# fast build rule for target.
-arduinobot_contol_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/build
-.PHONY : arduinobot_contol_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-arduinobot_contol_generate_messages_nodejs: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
-
-.PHONY : arduinobot_contol_generate_messages_nodejs
-
-# fast build rule for target.
-arduinobot_contol_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/build
-.PHONY : arduinobot_contol_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arduinobot_contol/CMakeFiles/arduinobot_contol_genpy.dir/rule:
@@ -573,19 +228,229 @@ arduinobot_contol_generate_messages_py/fast:
 .PHONY : arduinobot_contol_generate_messages_py/fast
 
 # Convenience name for target.
-arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+arduinobot_contol_generate_messages_nodejs: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : arduinobot_contol_generate_messages_nodejs
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+arduinobot_contol_generate_messages_nodejs/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_nodejs.dir/build
+.PHONY : arduinobot_contol_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_cpp: arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_cpp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_cpp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_lisp: arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_lisp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_lisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_py: arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_py
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_py/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
+
+# Convenience name for target.
+_arduinobot_contol_generate_messages_check_deps_AngleConvert: arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/rule
+
+.PHONY : _arduinobot_contol_generate_messages_check_deps_AngleConvert
+
+# fast build rule for target.
+_arduinobot_contol_generate_messages_check_deps_AngleConvert/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/build.make arduinobot_contol/CMakeFiles/_arduinobot_contol_generate_messages_check_deps_AngleConvert.dir/build
+.PHONY : _arduinobot_contol_generate_messages_check_deps_AngleConvert/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_genlisp: arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/rule
+
+.PHONY : arduinobot_contol_genlisp
+
+# fast build rule for target.
+arduinobot_contol_genlisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_genlisp.dir/build
+.PHONY : arduinobot_contol_genlisp/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_generate_messages_cpp: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/rule
+
+.PHONY : arduinobot_contol_generate_messages_cpp
+
+# fast build rule for target.
+arduinobot_contol_generate_messages_cpp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_cpp.dir/build
+.PHONY : arduinobot_contol_generate_messages_cpp/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_eus: arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_eus
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_eus/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+.PHONY : controller_manager_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_gencpp: arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/rule
+
+.PHONY : arduinobot_contol_gencpp
+
+# fast build rule for target.
+arduinobot_contol_gencpp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_gencpp.dir/build
+.PHONY : arduinobot_contol_gencpp/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_gennodejs: arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/rule
+
+.PHONY : arduinobot_contol_gennodejs
+
+# fast build rule for target.
+arduinobot_contol_gennodejs/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_gennodejs.dir/build
+.PHONY : arduinobot_contol_gennodejs/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_generate_messages_eus: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/rule
+
+.PHONY : arduinobot_contol_generate_messages_eus
+
+# fast build rule for target.
+arduinobot_contol_generate_messages_eus/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_eus.dir/build
+.PHONY : arduinobot_contol_generate_messages_eus/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_generate_messages: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/rule
+
+.PHONY : arduinobot_contol_generate_messages
+
+# fast build rule for target.
+arduinobot_contol_generate_messages/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages.dir/build
+.PHONY : arduinobot_contol_generate_messages/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_geneus: arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/rule
+
+.PHONY : arduinobot_contol_geneus
+
+# fast build rule for target.
+arduinobot_contol_geneus/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_geneus.dir/build
+.PHONY : arduinobot_contol_geneus/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_nodejs: arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_nodejs/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make arduinobot_contol/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
+.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+arduinobot_contol_generate_messages_lisp: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/rule
+
+.PHONY : arduinobot_contol_generate_messages_lisp
+
+# fast build rule for target.
+arduinobot_contol_generate_messages_lisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_lisp.dir/build
+.PHONY : arduinobot_contol_generate_messages_lisp/fast
 
 src/angle_convert_service_server.o: src/angle_convert_service_server.cpp.o
 
@@ -614,6 +479,33 @@ src/angle_convert_service_server.cpp.s:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/build.make arduinobot_contol/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.s
 .PHONY : src/angle_convert_service_server.cpp.s
 
+src/arduinobot_interface.o: src/arduinobot_interface.cpp.o
+
+.PHONY : src/arduinobot_interface.o
+
+# target to build an object file
+src/arduinobot_interface.cpp.o:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/src/arduinobot_interface.cpp.o
+.PHONY : src/arduinobot_interface.cpp.o
+
+src/arduinobot_interface.i: src/arduinobot_interface.cpp.i
+
+.PHONY : src/arduinobot_interface.i
+
+# target to preprocess a source file
+src/arduinobot_interface.cpp.i:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/src/arduinobot_interface.cpp.i
+.PHONY : src/arduinobot_interface.cpp.i
+
+src/arduinobot_interface.s: src/arduinobot_interface.cpp.s
+
+.PHONY : src/arduinobot_interface.s
+
+# target to generate assembly for a file
+src/arduinobot_interface.cpp.s:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/build.make arduinobot_contol/CMakeFiles/arduinobot_interface_node.dir/src/arduinobot_interface.cpp.s
+.PHONY : src/arduinobot_interface.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -621,43 +513,37 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... angles_converters_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... arduinobot_contol_generate_messages_cpp"
-	@echo "... arduinobot_contol_genlisp"
-	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
 	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... arduinobot_contol_generate_messages"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... arduinobot_contol_geneus"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... install"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... arduinobot_interface_node"
+	@echo "... angles_converters_cpp"
+	@echo "... arduinobot_contol_genpy"
+	@echo "... test"
+	@echo "... arduinobot_contol_generate_messages_py"
+	@echo "... arduinobot_contol_generate_messages_nodejs"
+	@echo "... controller_manager_msgs_generate_messages_cpp"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... controller_manager_msgs_generate_messages_py"
 	@echo "... _arduinobot_contol_generate_messages_check_deps_AngleConvert"
-	@echo "... arduinobot_contol_generate_messages_eus"
+	@echo "... list_install_components"
+	@echo "... arduinobot_contol_genlisp"
+	@echo "... arduinobot_contol_generate_messages_cpp"
+	@echo "... controller_manager_msgs_generate_messages_eus"
 	@echo "... arduinobot_contol_gencpp"
 	@echo "... arduinobot_contol_gennodejs"
+	@echo "... arduinobot_contol_generate_messages_eus"
+	@echo "... arduinobot_contol_generate_messages"
+	@echo "... arduinobot_contol_geneus"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... arduinobot_contol_generate_messages_lisp"
-	@echo "... arduinobot_contol_generate_messages_nodejs"
-	@echo "... arduinobot_contol_genpy"
-	@echo "... arduinobot_contol_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
 	@echo "... src/angle_convert_service_server.o"
 	@echo "... src/angle_convert_service_server.i"
 	@echo "... src/angle_convert_service_server.s"
+	@echo "... src/arduinobot_interface.o"
+	@echo "... src/arduinobot_interface.i"
+	@echo "... src/arduinobot_interface.s"
 .PHONY : help
 
 

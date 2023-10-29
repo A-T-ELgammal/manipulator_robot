@@ -18,6 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

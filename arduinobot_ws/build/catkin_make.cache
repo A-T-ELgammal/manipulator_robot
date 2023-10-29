@@ -1,2 +1,2 @@
-arduinobot_contol:arduinobot_description:arduinobot_pub_sub
+arduinobot_contol:arduinobot_description:arduinobot_moveit:arduinobot_pub_sub
 -DCATKIN_DEVEL_PREFIX=/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ahmed/projects/manipulator_robot/arduinobot_ws/install -G Unix Makefiles

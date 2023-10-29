@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   message_generation
+  controller_manager
+  hardware_interface
 )
 
 ## System dependencies are found with CMake's conventions
@@ -102,11 +104,16 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
+  INCLUDE_DIRS include
+  CATKIN_DEPENDS
+    controller_manager
+    hardware_interface
+)
 #  INCLUDE_DIRS include
 #  LIBRARIES arduinobot_contol
 #  CATKIN_DEPENDS roscpp std_msgs
 #  DEPENDS system_lib
-)
+
 
 ###########
 ## Build ##
@@ -115,7 +122,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -206,3 +213,6 @@ include_directories(
 add_executable(angles_converters_cpp src/angle_convert_service_server.cpp)
 add_dependencies(angles_converters_cpp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(angles_converters_cpp ${catkin_LIBRARIES})
+add_executable(arduinobot_interface_node src/arduinobot_interface.cpp)
+add_dependencies(arduinobot_interface_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(arduinobot_interface_node ${catkin_LIBRARIES})

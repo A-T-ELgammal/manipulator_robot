@@ -5,4 +5,4 @@ Description: Description of arduinobot_contol
 Version: 0.0.0
 Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: controller_manager hardware_interface
