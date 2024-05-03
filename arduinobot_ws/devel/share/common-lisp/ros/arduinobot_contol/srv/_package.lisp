@@ -1,4 +1,4 @@
-(cl:defpackage arduinobot_contol-srv
+(cl:defpackage arduinobot_controller-srv
   (:use )
   (:export
    "ANGLECONVERT"

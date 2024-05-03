@@ -1,7 +1,6 @@
 // Auto-generated. Do not edit!
 
-// (in-package arduinobot_contol.srv)
-
+// (in-package arduinobot_controller.srv)
 
 "use strict";
 
@@ -14,41 +13,35 @@ const _getByteLength = _ros_msg_utils.getByteLength;
 
 //-----------------------------------------------------------
 
-
 //-----------------------------------------------------------
 
 class AngleConvertRequest {
-  constructor(initObj={}) {
+  constructor(initObj = {}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.base = null;
       this.shoulder = null;
       this.elbow = null;
       this.gripper = null;
-    }
-    else {
-      if (initObj.hasOwnProperty('base')) {
-        this.base = initObj.base
-      }
-      else {
+    } else {
+      if (initObj.hasOwnProperty("base")) {
+        this.base = initObj.base;
+      } else {
         this.base = 0.0;
       }
-      if (initObj.hasOwnProperty('shoulder')) {
-        this.shoulder = initObj.shoulder
-      }
-      else {
+      if (initObj.hasOwnProperty("shoulder")) {
+        this.shoulder = initObj.shoulder;
+      } else {
         this.shoulder = 0.0;
       }
-      if (initObj.hasOwnProperty('elbow')) {
-        this.elbow = initObj.elbow
-      }
-      else {
+      if (initObj.hasOwnProperty("elbow")) {
+        this.elbow = initObj.elbow;
+      } else {
         this.elbow = 0.0;
       }
-      if (initObj.hasOwnProperty('gripper')) {
-        this.gripper = initObj.gripper
-      }
-      else {
+      if (initObj.hasOwnProperty("gripper")) {
+        this.gripper = initObj.gripper;
+      } else {
         this.gripper = 0.0;
       }
     }
@@ -67,7 +60,7 @@ class AngleConvertRequest {
     return bufferOffset;
   }
 
-  static deserialize(buffer, bufferOffset=[0]) {
+  static deserialize(buffer, bufferOffset = [0]) {
     //deserializes a message object of type AngleConvertRequest
     let len;
     let data = new AngleConvertRequest(null);
@@ -88,12 +81,12 @@ class AngleConvertRequest {
 
   static datatype() {
     // Returns string type for a service object
-    return 'arduinobot_contol/AngleConvertRequest';
+    return "arduinobot_controller/AngleConvertRequest";
   }
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '19b04e0ebe735f18fbbd5aea9d85b833';
+    return "19b04e0ebe735f18fbbd5aea9d85b833";
   }
 
   static messageDefinition() {
@@ -110,74 +103,65 @@ class AngleConvertRequest {
 
   static Resolve(msg) {
     // deep-construct a valid message object instance of whatever was passed in
-    if (typeof msg !== 'object' || msg === null) {
+    if (typeof msg !== "object" || msg === null) {
       msg = {};
     }
     const resolved = new AngleConvertRequest(null);
     if (msg.base !== undefined) {
       resolved.base = msg.base;
-    }
-    else {
-      resolved.base = 0.0
+    } else {
+      resolved.base = 0.0;
     }
 
     if (msg.shoulder !== undefined) {
       resolved.shoulder = msg.shoulder;
-    }
-    else {
-      resolved.shoulder = 0.0
+    } else {
+      resolved.shoulder = 0.0;
     }
 
     if (msg.elbow !== undefined) {
       resolved.elbow = msg.elbow;
-    }
-    else {
-      resolved.elbow = 0.0
+    } else {
+      resolved.elbow = 0.0;
     }
 
     if (msg.gripper !== undefined) {
       resolved.gripper = msg.gripper;
-    }
-    else {
-      resolved.gripper = 0.0
+    } else {
+      resolved.gripper = 0.0;
     }
 
     return resolved;
-    }
-};
+  }
+}
 
 class AngleConvertResponse {
-  constructor(initObj={}) {
+  constructor(initObj = {}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.base = null;
       this.shoulder = null;
       this.elbow = null;
       this.gripper = null;
-    }
-    else {
-      if (initObj.hasOwnProperty('base')) {
-        this.base = initObj.base
-      }
-      else {
+    } else {
+      if (initObj.hasOwnProperty("base")) {
+        this.base = initObj.base;
+      } else {
         this.base = 0.0;
       }
-      if (initObj.hasOwnProperty('shoulder')) {
-        this.shoulder = initObj.shoulder
-      }
-      else {
+      if (initObj.hasOwnProperty("shoulder")) {
+        this.shoulder = initObj.shoulder;
+      } else {
         this.shoulder = 0.0;
       }
-      if (initObj.hasOwnProperty('elbow')) {
-        this.elbow = initObj.elbow
-      }
-      else {
+      if (initObj.hasOwnProperty("elbow")) {
+        this.elbow = initObj.elbow;
+      } else {
         this.elbow = 0.0;
       }
-      if (initObj.hasOwnProperty('gripper')) {
-        this.gripper = initObj.gripper
-      }
-      else {
+      if (initObj.hasOwnProperty("gripper")) {
+        this.gripper = initObj.gripper;
+      } else {
         this.gripper = 0.0;
       }
     }
@@ -196,7 +180,7 @@ class AngleConvertResponse {
     return bufferOffset;
   }
 
-  static deserialize(buffer, bufferOffset=[0]) {
+  static deserialize(buffer, bufferOffset = [0]) {
     //deserializes a message object of type AngleConvertResponse
     let len;
     let data = new AngleConvertResponse(null);
@@ -217,12 +201,12 @@ class AngleConvertResponse {
 
   static datatype() {
     // Returns string type for a service object
-    return 'arduinobot_contol/AngleConvertResponse';
+    return "arduinobot_controller/AngleConvertResponse";
   }
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '19b04e0ebe735f18fbbd5aea9d85b833';
+    return "19b04e0ebe735f18fbbd5aea9d85b833";
   }
 
   static messageDefinition() {
@@ -240,45 +224,45 @@ class AngleConvertResponse {
 
   static Resolve(msg) {
     // deep-construct a valid message object instance of whatever was passed in
-    if (typeof msg !== 'object' || msg === null) {
+    if (typeof msg !== "object" || msg === null) {
       msg = {};
     }
     const resolved = new AngleConvertResponse(null);
     if (msg.base !== undefined) {
       resolved.base = msg.base;
-    }
-    else {
-      resolved.base = 0.0
+    } else {
+      resolved.base = 0.0;
     }
 
     if (msg.shoulder !== undefined) {
       resolved.shoulder = msg.shoulder;
-    }
-    else {
-      resolved.shoulder = 0.0
+    } else {
+      resolved.shoulder = 0.0;
     }
 
     if (msg.elbow !== undefined) {
       resolved.elbow = msg.elbow;
-    }
-    else {
-      resolved.elbow = 0.0
+    } else {
+      resolved.elbow = 0.0;
     }
 
     if (msg.gripper !== undefined) {
       resolved.gripper = msg.gripper;
-    }
-    else {
-      resolved.gripper = 0.0
+    } else {
+      resolved.gripper = 0.0;
     }
 
     return resolved;
-    }
-};
+  }
+}
 
 module.exports = {
   Request: AngleConvertRequest,
   Response: AngleConvertResponse,
-  md5sum() { return '904e8346ace63ec441f6f58d8efc6687'; },
-  datatype() { return 'arduinobot_contol/AngleConvert'; }
+  md5sum() {
+    return "904e8346ace63ec441f6f58d8efc6687";
+  },
+  datatype() {
+    return "arduinobot_controller/AngleConvert";
+  },
 };

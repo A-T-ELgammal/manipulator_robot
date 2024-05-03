@@ -48,42 +48,42 @@ CMAKE_SOURCE_DIR = /home/ahmed/projects/manipulator_robot/arduinobot_ws/src
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ahmed/projects/manipulator_robot/arduinobot_ws/build
 
-# Utility rule file for arduinobot_contol_generate_messages_py.
+# Utility rule file for arduinobot_controller_generate_messages_py.
 
 # Include the progress variables for this target.
-include arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/progress.make
+include arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/progress.make
 
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/_AngleConvert.py
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/__init__.py
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/_AngleConvert.py
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/__init__.py
 
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/_AngleConvert.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/_AngleConvert.py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/srv/AngleConvert.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV arduinobot_contol/AngleConvert"
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/srv/AngleConvert.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arduinobot_contol -o /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/_AngleConvert.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/_AngleConvert.py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/srv/AngleConvert.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV arduinobot_controller/AngleConvert"
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/srv/AngleConvert.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arduinobot_controller -o /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/__init__.py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/_AngleConvert.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for arduinobot_contol"
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv --initpy
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/__init__.py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/_AngleConvert.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for arduinobot_controller"
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv --initpy
 
-arduinobot_contol_generate_messages_py: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py
-arduinobot_contol_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/_AngleConvert.py
-arduinobot_contol_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_contol/srv/__init__.py
-arduinobot_contol_generate_messages_py: arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/build.make
+arduinobot_controller_generate_messages_py: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py
+arduinobot_controller_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/_AngleConvert.py
+arduinobot_controller_generate_messages_py: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/python3/dist-packages/arduinobot_controller/srv/__init__.py
+arduinobot_controller_generate_messages_py: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/build.make
 
-.PHONY : arduinobot_contol_generate_messages_py
+.PHONY : arduinobot_controller_generate_messages_py
 
 # Rule to build all files generated by this target.
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/build: arduinobot_contol_generate_messages_py
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/build: arduinobot_controller_generate_messages_py
 
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/build
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/build
 
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/clean:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol && $(CMAKE_COMMAND) -P CMakeFiles/arduinobot_contol_generate_messages_py.dir/cmake_clean.cmake
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/clean
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/clean:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller && $(CMAKE_COMMAND) -P CMakeFiles/arduinobot_controller_generate_messages_py.dir/cmake_clean.cmake
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/clean
 
-arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/depend:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/projects/manipulator_robot/arduinobot_ws/src /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol /home/ahmed/projects/manipulator_robot/arduinobot_ws/build /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : arduinobot_contol/CMakeFiles/arduinobot_contol_generate_messages_py.dir/depend
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/depend:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/projects/manipulator_robot/arduinobot_ws/src /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller /home/ahmed/projects/manipulator_robot/arduinobot_ws/build /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_py.dir/depend
 

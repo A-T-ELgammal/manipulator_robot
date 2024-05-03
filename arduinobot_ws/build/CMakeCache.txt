@@ -407,16 +407,10 @@ aeduinobot_description_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/
 aeduinobot_description_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_description
 
 //Value Computed by CMake
-arduinobot_contol_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_contol
+arduinobot_controller_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_controller
 
 //Value Computed by CMake
-arduinobot_contol_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol
-
-//Value Computed by CMake
-arduinobot_controller_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller
-
-//Value Computed by CMake
-arduinobot_controller_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller
+arduinobot_controller_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller
 
 //Value Computed by CMake
 arduinobot_dedscription_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_description
@@ -789,7 +783,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

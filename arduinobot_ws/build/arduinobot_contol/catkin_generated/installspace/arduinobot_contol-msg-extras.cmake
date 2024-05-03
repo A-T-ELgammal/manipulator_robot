@@ -1,2 +1,2 @@
-set(arduinobot_contol_MESSAGE_FILES "")
-set(arduinobot_contol_SERVICE_FILES "srv/AngleConvert.srv")
+set(arduinobot_controller_MESSAGE_FILES "")
+set(arduinobot_controller_SERVICE_FILES "srv/AngleConvert.srv")

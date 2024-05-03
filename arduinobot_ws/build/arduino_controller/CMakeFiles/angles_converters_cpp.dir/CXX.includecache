@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp
 ros/ros.h
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/ros/ros.h
 arduinobot_controller/AngleConvert.h

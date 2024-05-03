@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp" "/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp" "/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

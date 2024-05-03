@@ -146,9 +146,10 @@ struct Definition< ::arduinobot_pub_sub::AddTwoIntsResponse_<ContainerAllocator>
 {
   static const char* value()
   {
-    return "#Response\n"
+    return "# Response\n"
 "\n"
 "int64 sum\n"
+"\n"
 ;
   }
 

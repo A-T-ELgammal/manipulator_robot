@@ -77,11 +77,10 @@ class AddTwoIntsRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    #Request
+    # Request 
     
     int64 a
     int64 b
-    
     
     `;
   }
@@ -159,9 +158,10 @@ class AddTwoIntsResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    #Response
+    # Response
     
     int64 sum
+    
     
     `;
   }

@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/srv/AngleConvert.srv"
-pkg_name = "arduinobot_contol"
+services_str = "/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/srv/AngleConvert.srv"
+pkg_name = "arduinobot_controller"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
 dep_include_paths_str = "std_msgs;/opt/ros/noetic/share/std_msgs/cmake/../msg"

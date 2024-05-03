@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_contol/angles_converters_cpp"
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_contol/angles_converters_cpp.pdb"
-  "CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp.pdb"
+  "CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

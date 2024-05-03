@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_contol/AngleConvert.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvert.h
 ros/service_traits.h
 -
-arduinobot_contol/AngleConvertRequest.h
+arduinobot_controller/AngleConvertRequest.h
 -
-arduinobot_contol/AngleConvertResponse.h
+arduinobot_controller/AngleConvertResponse.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_contol/AngleConvertRequest.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvertRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_contol/AngleConvertResponse.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvertResponse.h
 string
 -
 vector
@@ -46,11 +46,11 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/src/angle_convert_service_server.cpp
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/AnglesConverter_service_server.cpp
 ros/ros.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/src/ros/ros.h
-arduinobot_contol/AngleConvert.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_contol/src/arduinobot_contol/AngleConvert.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/ros/ros.h
+arduinobot_controller/AngleConvert.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/arduinobot_controller/AngleConvert.h
 math.h
 -
 

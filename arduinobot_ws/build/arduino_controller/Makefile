@@ -362,32 +362,32 @@ arduinobot_controller_genpy/fast:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/arduinobot_controller_genpy.dir/build.make arduino_controller/CMakeFiles/arduinobot_controller_genpy.dir/build
 .PHONY : arduinobot_controller_genpy/fast
 
-src/angle_convert_service_server.o: src/angle_convert_service_server.cpp.o
+src/AnglesConverter_service_server.o: src/AnglesConverter_service_server.cpp.o
 
-.PHONY : src/angle_convert_service_server.o
+.PHONY : src/AnglesConverter_service_server.o
 
 # target to build an object file
-src/angle_convert_service_server.cpp.o:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o
-.PHONY : src/angle_convert_service_server.cpp.o
+src/AnglesConverter_service_server.cpp.o:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o
+.PHONY : src/AnglesConverter_service_server.cpp.o
 
-src/angle_convert_service_server.i: src/angle_convert_service_server.cpp.i
+src/AnglesConverter_service_server.i: src/AnglesConverter_service_server.cpp.i
 
-.PHONY : src/angle_convert_service_server.i
+.PHONY : src/AnglesConverter_service_server.i
 
 # target to preprocess a source file
-src/angle_convert_service_server.cpp.i:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.i
-.PHONY : src/angle_convert_service_server.cpp.i
+src/AnglesConverter_service_server.cpp.i:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.i
+.PHONY : src/AnglesConverter_service_server.cpp.i
 
-src/angle_convert_service_server.s: src/angle_convert_service_server.cpp.s
+src/AnglesConverter_service_server.s: src/AnglesConverter_service_server.cpp.s
 
-.PHONY : src/angle_convert_service_server.s
+.PHONY : src/AnglesConverter_service_server.s
 
 # target to generate assembly for a file
-src/angle_convert_service_server.cpp.s:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.s
-.PHONY : src/angle_convert_service_server.cpp.s
+src/AnglesConverter_service_server.cpp.s:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.s
+.PHONY : src/AnglesConverter_service_server.cpp.s
 
 # Help Target
 help:
@@ -415,9 +415,9 @@ help:
 	@echo "... arduinobot_controller_generate_messages_py"
 	@echo "... arduinobot_controller_gennodejs"
 	@echo "... arduinobot_controller_genpy"
-	@echo "... src/angle_convert_service_server.o"
-	@echo "... src/angle_convert_service_server.i"
-	@echo "... src/angle_convert_service_server.s"
+	@echo "... src/AnglesConverter_service_server.o"
+	@echo "... src/AnglesConverter_service_server.i"
+	@echo "... src/AnglesConverter_service_server.s"
 .PHONY : help
 
 

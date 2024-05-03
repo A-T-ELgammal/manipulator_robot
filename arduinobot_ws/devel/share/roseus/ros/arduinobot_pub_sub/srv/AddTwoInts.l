@@ -178,29 +178,29 @@
 (setf (get arduinobot_pub_sub::AddTwoIntsRequest :md5sum-) "6a2e34150c00229791cc89ff309fff21")
 (setf (get arduinobot_pub_sub::AddTwoIntsRequest :datatype-) "arduinobot_pub_sub/AddTwoIntsRequest")
 (setf (get arduinobot_pub_sub::AddTwoIntsRequest :definition-)
-      "#Request
+      "# Request 
 
 int64 a
 int64 b
-
 ---
-#Response
+# Response
 
 int64 sum
+
 ")
 
 (setf (get arduinobot_pub_sub::AddTwoIntsResponse :md5sum-) "6a2e34150c00229791cc89ff309fff21")
 (setf (get arduinobot_pub_sub::AddTwoIntsResponse :datatype-) "arduinobot_pub_sub/AddTwoIntsResponse")
 (setf (get arduinobot_pub_sub::AddTwoIntsResponse :definition-)
-      "#Request
+      "# Request 
 
 int64 a
 int64 b
-
 ---
-#Response
+# Response
 
 int64 sum
+
 ")
 
 

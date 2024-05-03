@@ -1,16 +1,16 @@
 ;; Auto-generated. Do not edit!
 
 
-(when (boundp 'arduinobot_contol::AngleConvert)
-  (if (not (find-package "ARDUINOBOT_CONTOL"))
-    (make-package "ARDUINOBOT_CONTOL"))
-  (shadow 'AngleConvert (find-package "ARDUINOBOT_CONTOL")))
-(unless (find-package "ARDUINOBOT_CONTOL::ANGLECONVERT")
-  (make-package "ARDUINOBOT_CONTOL::ANGLECONVERT"))
-(unless (find-package "ARDUINOBOT_CONTOL::ANGLECONVERTREQUEST")
-  (make-package "ARDUINOBOT_CONTOL::ANGLECONVERTREQUEST"))
-(unless (find-package "ARDUINOBOT_CONTOL::ANGLECONVERTRESPONSE")
-  (make-package "ARDUINOBOT_CONTOL::ANGLECONVERTRESPONSE"))
+(when (boundp 'arduinobot_controller::AngleConvert)
+  (if (not (find-package "arduinobot_controller"))
+    (make-package "arduinobot_controller"))
+  (shadow 'AngleConvert (find-package "arduinobot_controller")))
+(unless (find-package "arduinobot_controller::ANGLECONVERT")
+  (make-package "arduinobot_controller::ANGLECONVERT"))
+(unless (find-package "arduinobot_controller::ANGLECONVERTREQUEST")
+  (make-package "arduinobot_controller::ANGLECONVERTREQUEST"))
+(unless (find-package "arduinobot_controller::ANGLECONVERTRESPONSE")
+  (make-package "arduinobot_controller::ANGLECONVERTRESPONSE"))
 
 (in-package "ROS")
 
@@ -18,11 +18,11 @@
 
 
 
-(defclass arduinobot_contol::AngleConvertRequest
+(defclass arduinobot_controller::AngleConvertRequest
   :super ros::object
   :slots (_base _shoulder _elbow _gripper ))
 
-(defmethod arduinobot_contol::AngleConvertRequest
+(defmethod arduinobot_controller::AngleConvertRequest
   (:init
    (&key
     ((:base __base) 0.0)
@@ -88,11 +88,11 @@
    self)
   )
 
-(defclass arduinobot_contol::AngleConvertResponse
+(defclass arduinobot_controller::AngleConvertResponse
   :super ros::object
   :slots (_base _shoulder _elbow _gripper ))
 
-(defmethod arduinobot_contol::AngleConvertResponse
+(defmethod arduinobot_controller::AngleConvertResponse
   (:init
    (&key
     ((:base __base) 0.0)
@@ -158,21 +158,21 @@
    self)
   )
 
-(defclass arduinobot_contol::AngleConvert
+(defclass arduinobot_controller::AngleConvert
   :super ros::object
   :slots ())
 
-(setf (get arduinobot_contol::AngleConvert :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
-(setf (get arduinobot_contol::AngleConvert :datatype-) "arduinobot_contol/AngleConvert")
-(setf (get arduinobot_contol::AngleConvert :request) arduinobot_contol::AngleConvertRequest)
-(setf (get arduinobot_contol::AngleConvert :response) arduinobot_contol::AngleConvertResponse)
+(setf (get arduinobot_controller::AngleConvert :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
+(setf (get arduinobot_controller::AngleConvert :datatype-) "arduinobot_controller/AngleConvert")
+(setf (get arduinobot_controller::AngleConvert :request) arduinobot_controller::AngleConvertRequest)
+(setf (get arduinobot_controller::AngleConvert :response) arduinobot_controller::AngleConvertResponse)
 
-(defmethod arduinobot_contol::AngleConvertRequest
-  (:response () (instance arduinobot_contol::AngleConvertResponse :init)))
+(defmethod arduinobot_controller::AngleConvertRequest
+  (:response () (instance arduinobot_controller::AngleConvertResponse :init)))
 
-(setf (get arduinobot_contol::AngleConvertRequest :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
-(setf (get arduinobot_contol::AngleConvertRequest :datatype-) "arduinobot_contol/AngleConvertRequest")
-(setf (get arduinobot_contol::AngleConvertRequest :definition-)
+(setf (get arduinobot_controller::AngleConvertRequest :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
+(setf (get arduinobot_controller::AngleConvertRequest :datatype-) "arduinobot_controller/AngleConvertRequest")
+(setf (get arduinobot_controller::AngleConvertRequest :definition-)
       "#Rrequest 
 float64 base 
 float64 shoulder 
@@ -187,9 +187,9 @@ float64 gripper
 
 ")
 
-(setf (get arduinobot_contol::AngleConvertResponse :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
-(setf (get arduinobot_contol::AngleConvertResponse :datatype-) "arduinobot_contol/AngleConvertResponse")
-(setf (get arduinobot_contol::AngleConvertResponse :definition-)
+(setf (get arduinobot_controller::AngleConvertResponse :md5sum-) "904e8346ace63ec441f6f58d8efc6687")
+(setf (get arduinobot_controller::AngleConvertResponse :datatype-) "arduinobot_controller/AngleConvertResponse")
+(setf (get arduinobot_controller::AngleConvertResponse :definition-)
       "#Rrequest 
 float64 base 
 float64 shoulder 
@@ -206,6 +206,6 @@ float64 gripper
 
 
 
-(provide :arduinobot_contol/AngleConvert "904e8346ace63ec441f6f58d8efc6687")
+(provide :arduinobot_controller/AngleConvert "904e8346ace63ec441f6f58d8efc6687")
 
 

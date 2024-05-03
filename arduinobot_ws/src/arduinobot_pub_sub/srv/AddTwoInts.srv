@@ -1,9 +1,8 @@
-#Request
+# Request 
 
 int64 a
 int64 b
-
 ---
-#Response
+# Response
 
 int64 sum

@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package arduinobot_contol-srv)
+(cl:in-package arduinobot_controller-srv)
 
 
 ;//! \htmlinclude AngleConvert-request.msg.html
@@ -35,26 +35,26 @@
 (cl:defmethod cl:initialize-instance :after ((m <AngleConvert-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'AngleConvert-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name arduinobot_contol-srv:<AngleConvert-request> is deprecated: use arduinobot_contol-srv:AngleConvert-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name arduinobot_controller-srv:<AngleConvert-request> is deprecated: use arduinobot_controller-srv:AngleConvert-request instead.")))
 
 (cl:ensure-generic-function 'base-val :lambda-list '(m))
 (cl:defmethod base-val ((m <AngleConvert-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:base-val is deprecated.  Use arduinobot_contol-srv:base instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:base-val is deprecated.  Use arduinobot_controller-srv:base instead.")
   (base m))
 
 (cl:ensure-generic-function 'shoulder-val :lambda-list '(m))
 (cl:defmethod shoulder-val ((m <AngleConvert-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:shoulder-val is deprecated.  Use arduinobot_contol-srv:shoulder instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:shoulder-val is deprecated.  Use arduinobot_controller-srv:shoulder instead.")
   (shoulder m))
 
 (cl:ensure-generic-function 'elbow-val :lambda-list '(m))
 (cl:defmethod elbow-val ((m <AngleConvert-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:elbow-val is deprecated.  Use arduinobot_contol-srv:elbow instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:elbow-val is deprecated.  Use arduinobot_controller-srv:elbow instead.")
   (elbow m))
 
 (cl:ensure-generic-function 'gripper-val :lambda-list '(m))
 (cl:defmethod gripper-val ((m <AngleConvert-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:gripper-val is deprecated.  Use arduinobot_contol-srv:gripper instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:gripper-val is deprecated.  Use arduinobot_controller-srv:gripper instead.")
   (gripper m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <AngleConvert-request>) ostream)
   "Serializes a message object of type '<AngleConvert-request>"
@@ -141,10 +141,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AngleConvert-request>)))
   "Returns string type for a service object of type '<AngleConvert-request>"
-  "arduinobot_contol/AngleConvertRequest")
+  "arduinobot_controller/AngleConvertRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'AngleConvert-request)))
   "Returns string type for a service object of type 'AngleConvert-request"
-  "arduinobot_contol/AngleConvertRequest")
+  "arduinobot_controller/AngleConvertRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AngleConvert-request>)))
   "Returns md5sum for a message object of type '<AngleConvert-request>"
   "904e8346ace63ec441f6f58d8efc6687")
@@ -203,26 +203,26 @@
 (cl:defmethod cl:initialize-instance :after ((m <AngleConvert-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'AngleConvert-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name arduinobot_contol-srv:<AngleConvert-response> is deprecated: use arduinobot_contol-srv:AngleConvert-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name arduinobot_controller-srv:<AngleConvert-response> is deprecated: use arduinobot_controller-srv:AngleConvert-response instead.")))
 
 (cl:ensure-generic-function 'base-val :lambda-list '(m))
 (cl:defmethod base-val ((m <AngleConvert-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:base-val is deprecated.  Use arduinobot_contol-srv:base instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:base-val is deprecated.  Use arduinobot_controller-srv:base instead.")
   (base m))
 
 (cl:ensure-generic-function 'shoulder-val :lambda-list '(m))
 (cl:defmethod shoulder-val ((m <AngleConvert-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:shoulder-val is deprecated.  Use arduinobot_contol-srv:shoulder instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:shoulder-val is deprecated.  Use arduinobot_controller-srv:shoulder instead.")
   (shoulder m))
 
 (cl:ensure-generic-function 'elbow-val :lambda-list '(m))
 (cl:defmethod elbow-val ((m <AngleConvert-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:elbow-val is deprecated.  Use arduinobot_contol-srv:elbow instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:elbow-val is deprecated.  Use arduinobot_controller-srv:elbow instead.")
   (elbow m))
 
 (cl:ensure-generic-function 'gripper-val :lambda-list '(m))
 (cl:defmethod gripper-val ((m <AngleConvert-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_contol-srv:gripper-val is deprecated.  Use arduinobot_contol-srv:gripper instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_controller-srv:gripper-val is deprecated.  Use arduinobot_controller-srv:gripper instead.")
   (gripper m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <AngleConvert-response>) ostream)
   "Serializes a message object of type '<AngleConvert-response>"
@@ -309,10 +309,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AngleConvert-response>)))
   "Returns string type for a service object of type '<AngleConvert-response>"
-  "arduinobot_contol/AngleConvertResponse")
+  "arduinobot_controller/AngleConvertResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'AngleConvert-response)))
   "Returns string type for a service object of type 'AngleConvert-response"
-  "arduinobot_contol/AngleConvertResponse")
+  "arduinobot_controller/AngleConvertResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AngleConvert-response>)))
   "Returns md5sum for a message object of type '<AngleConvert-response>"
   "904e8346ace63ec441f6f58d8efc6687")
@@ -346,4 +346,4 @@
   'AngleConvert-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'AngleConvert)))
   "Returns string type for a service object of type '<AngleConvert>"
-  "arduinobot_contol/AngleConvert")
+  "arduinobot_controller/AngleConvert")

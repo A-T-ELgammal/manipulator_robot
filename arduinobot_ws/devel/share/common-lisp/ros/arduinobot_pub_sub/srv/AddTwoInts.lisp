@@ -97,10 +97,10 @@
   "6a2e34150c00229791cc89ff309fff21")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-request>)))
   "Returns full string definition for message of type '<AddTwoInts-request>"
-  (cl:format cl:nil "#Request~%~%int64 a~%int64 b~%~%~%~%"))
+  (cl:format cl:nil "# Request ~%~%int64 a~%int64 b~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AddTwoInts-request)))
   "Returns full string definition for message of type 'AddTwoInts-request"
-  (cl:format cl:nil "#Request~%~%int64 a~%int64 b~%~%~%~%"))
+  (cl:format cl:nil "# Request ~%~%int64 a~%int64 b~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AddTwoInts-request>))
   (cl:+ 0
      8
@@ -175,10 +175,10 @@
   "6a2e34150c00229791cc89ff309fff21")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-response>)))
   "Returns full string definition for message of type '<AddTwoInts-response>"
-  (cl:format cl:nil "#Response~%~%int64 sum~%~%~%"))
+  (cl:format cl:nil "# Response~%~%int64 sum~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AddTwoInts-response)))
   "Returns full string definition for message of type 'AddTwoInts-response"
-  (cl:format cl:nil "#Response~%~%int64 sum~%~%~%"))
+  (cl:format cl:nil "# Response~%~%int64 sum~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AddTwoInts-response>))
   (cl:+ 0
      8

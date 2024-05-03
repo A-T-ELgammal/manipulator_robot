@@ -11,11 +11,10 @@ class AddTwoIntsRequest(genpy.Message):
   _md5sum = "36d09b846be0b371c5f190354dd3153e"
   _type = "arduinobot_pub_sub/AddTwoIntsRequest"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """#Request
+  _full_text = """# Request 
 
 int64 a
 int64 b
-
 """
   __slots__ = ['a','b']
   _slot_types = ['int64','int64']
@@ -133,9 +132,10 @@ class AddTwoIntsResponse(genpy.Message):
   _md5sum = "b88405221c77b1878a3cbbfff53428d7"
   _type = "arduinobot_pub_sub/AddTwoIntsResponse"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """#Response
+  _full_text = """# Response
 
 int64 sum
+
 """
   __slots__ = ['sum']
   _slot_types = ['int64']

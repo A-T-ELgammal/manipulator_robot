@@ -152,11 +152,10 @@ struct Definition< ::arduinobot_pub_sub::AddTwoIntsRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "#Request\n"
+    return "# Request \n"
 "\n"
 "int64 a\n"
 "int64 b\n"
-"\n"
 ;
   }
 

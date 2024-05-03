@@ -1,8 +1,8 @@
 
 "use strict";
 
-let AngleConvert = require('./AngleConvert.js')
+let AnglesConverter = require('./AnglesConverter.js')
 
 module.exports = {
-  AngleConvert: AngleConvert,
+  AnglesConverter: AnglesConverter,
 };

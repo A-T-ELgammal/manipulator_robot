@@ -57,27 +57,27 @@ include arduino_controller/CMakeFiles/angles_converters_cpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include arduino_controller/CMakeFiles/angles_converters_cpp.dir/flags.make
 
-arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o: arduino_controller/CMakeFiles/angles_converters_cpp.dir/flags.make
-arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o"
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o -c /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp
+arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o: arduino_controller/CMakeFiles/angles_converters_cpp.dir/flags.make
+arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o"
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o -c /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp
 
-arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.i"
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp > CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.i
+arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.i"
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp > CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.i
 
-arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.s"
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/angle_convert_service_server.cpp -o CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.s
+arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.s"
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduino_controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduino_controller/src/AnglesConverter_service_server.cpp -o CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.s
 
 # Object files for target angles_converters_cpp
 angles_converters_cpp_OBJECTS = \
-"CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o"
+"CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o"
 
 # External object files for target angles_converters_cpp
 angles_converters_cpp_EXTERNAL_OBJECTS =
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp: arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/angle_convert_service_server.cpp.o
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp: arduino_controller/CMakeFiles/angles_converters_cpp.dir/src/AnglesConverter_service_server.cpp.o
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp: arduino_controller/CMakeFiles/angles_converters_cpp.dir/build.make
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp: /opt/ros/noetic/lib/libroscpp.so
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/lib/arduinobot_controller/angles_converters_cpp: /usr/lib/x86_64-linux-gnu/libpthread.so
