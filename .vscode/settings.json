@@ -2,7 +2,13 @@
   "ros.distro": "noetic",
   "files.associations": {
     "string": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "bitset": "cpp",
+    "memory": "cpp",
+    "random": "cpp",
+    "optional": "cpp"
   },
   "python.autoComplete.extraPaths": [
     "/opt/ros/noetic/lib/python3/dist-packages"
