@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "/opt/ros/noetic/include"
+                "/opt/ros/noetic/include",
+                "${workspaceFolder}/arduinobot_ws/devel/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

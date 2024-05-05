@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvert.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AnglesConverter.h
 ros/service_traits.h
 -
-arduinobot_controller/AngleConvertRequest.h
+arduinobot_controller/AnglesConverterRequest.h
 -
-arduinobot_controller/AngleConvertResponse.h
+arduinobot_controller/AnglesConverterResponse.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvertRequest.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AnglesConverterRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AngleConvertResponse.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_controller/AnglesConverterResponse.h
 string
 -
 vector
@@ -46,29 +46,29 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/arduinobot_interface.h
-hardware_interface/joint_state_interface.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/hardware_interface/joint_state_interface.h
-hardware_interface/joint_command_interface.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/hardware_interface/joint_command_interface.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/arduinobot_controller/arduinobot_interface.h
 hardware_interface/robot_hw.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/hardware_interface/robot_hw.h
+-
+hardware_interface/joint_state_interface.h
+-
+hardware_interface/joint_command_interface.h
+-
 controller_manager/controller_manager.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/controller_manager/controller_manager.h
+-
 ros/ros.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/ros/ros.h
+-
 vector
 -
 boost/scoped_ptr.hpp
 -
 
 /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/arduinobot_interface.cpp
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/include/arduinobot_interface.h
--
 std_msgs/UInt16MultiArray.h
 -
-arduinobot_controller/AngleConvert.h
-/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/arduinobot_controller/AngleConvert.h
+arduinobot_controller/AnglesConverter.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/arduinobot_controller/AnglesConverter.h
+arduinobot_controller/arduinobot_interface.h
+/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_controller/src/arduinobot_controller/arduinobot_interface.h
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp

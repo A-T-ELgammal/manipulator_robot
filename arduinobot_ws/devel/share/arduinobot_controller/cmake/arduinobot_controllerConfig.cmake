@@ -99,7 +99,7 @@ if(NOT "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include;/home
   elseif(NOT " " STREQUAL " ")
     set(_report "Check the website '' for information and consider reporting the problem.")
   else()
-    set(_report "Report the problem to the maintainer 'ahmed <ahmed@todo.todo>' and request to fix the problem.")
+    set(_report "Report the problem to the maintainer 'ahmed elgammal <a.t.elgammal@gmail.com>' and request to fix the problem.")
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
@@ -185,7 +185,7 @@ foreach(t ${arduinobot_controller_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "controller_manager;hardware_interface")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

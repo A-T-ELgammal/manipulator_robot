@@ -5,12 +5,13 @@
 #include <ros/ros.h>
 #include <vector>
 #include <boost/scoped_ptr.hpp>
+
 #pragma once
 
-class arduinobot_interface : public hardware_interface::RobotHW
+class Arduinobot_Interface : public hardware_interface::RobotHW
 {
 public:
-    arduinobot_interface(ros::NodeHandle &); // called when timer is expired
+    Arduinobot_Interface(ros::NodeHandle &); // called when timer is expired
     void update(const ros::TimerEvent &);
     void readFromArduino();
     void writeToArduino(ros::Duration);
