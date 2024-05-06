@@ -5,6 +5,5 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("arduinobot_pub_sub")
 subdirs("arduinobot_controller")
 subdirs("arduinobot_description")
