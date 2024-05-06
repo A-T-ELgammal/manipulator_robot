@@ -1,9 +1,0 @@
-is_real_file: false
-
-arduinobot:
-  number_of_joints: 4
-  joints_names:
-    - joint_1
-    - joint_2
-    - joint_3
-    - joint_4
