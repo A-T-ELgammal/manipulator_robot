@@ -436,6 +436,12 @@ arduinobot_pub_sub_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/ardu
 //Value Computed by CMake
 arduinobot_pub_sub_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_pub_sub
 
+//Value Computed by CMake
+arduinobot_remote_BINARY_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/build/arduinobot_remote
+
+//Value Computed by CMake
+arduinobot_remote_SOURCE_DIR:STATIC=/home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_remote
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
@@ -783,7 +789,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

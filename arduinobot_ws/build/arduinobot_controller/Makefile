@@ -56,39 +56,6 @@ CMAKE_BINARY_DIR = /home/ahmed/projects/manipulator_robot/arduinobot_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -100,17 +67,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -124,6 +80,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -134,6 +100,40 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -228,259 +228,19 @@ arduinobot_controller_generate_messages_py/fast:
 .PHONY : arduinobot_controller_generate_messages_py/fast
 
 # Convenience name for target.
-arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+arduinobot_controller_gennodejs: arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : arduinobot_controller_gennodejs
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_generate_messages_lisp: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
-
-.PHONY : arduinobot_controller_generate_messages_lisp
-
-# fast build rule for target.
-arduinobot_controller_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/build
-.PHONY : arduinobot_controller_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arduinobot_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arduinobot_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_gencpp: arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
-
-.PHONY : arduinobot_controller_gencpp
-
-# fast build rule for target.
-arduinobot_controller_gencpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/build
-.PHONY : arduinobot_controller_gencpp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/build.make arduinobot_controller/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_lisp: arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_lisp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_generate_messages: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
-
-.PHONY : arduinobot_controller_generate_messages
-
-# fast build rule for target.
-arduinobot_controller_generate_messages/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/build
-.PHONY : arduinobot_controller_generate_messages/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_genlisp: arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
-
-.PHONY : arduinobot_controller_genlisp
-
-# fast build rule for target.
-arduinobot_controller_genlisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/build
-.PHONY : arduinobot_controller_genlisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arduinobot_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arduinobot_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arduinobot_controller/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+arduinobot_controller_gennodejs/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/build
+.PHONY : arduinobot_controller_gennodejs/fast
 
 # Convenience name for target.
 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
@@ -498,94 +258,19 @@ controller_manager_msgs_generate_messages_cpp/fast:
 .PHONY : controller_manager_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+controller_manager_msgs_generate_messages_lisp: arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : roscpp_generate_messages_lisp
+.PHONY : controller_manager_msgs_generate_messages_lisp
 
 # fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_eus: arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_eus
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_eus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
-.PHONY : controller_manager_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_generate_messages_cpp: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
-
-.PHONY : arduinobot_controller_generate_messages_cpp
-
-# fast build rule for target.
-arduinobot_controller_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/build
-.PHONY : arduinobot_controller_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arduinobot_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_generate_messages_nodejs: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
-
-.PHONY : arduinobot_controller_generate_messages_nodejs
-
-# fast build rule for target.
-arduinobot_controller_generate_messages_nodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/build
-.PHONY : arduinobot_controller_generate_messages_nodejs/fast
+controller_manager_msgs_generate_messages_lisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
@@ -603,34 +288,19 @@ controller_manager_msgs_generate_messages_nodejs/fast:
 .PHONY : controller_manager_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
+arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
 
 # Convenience name for target.
-arduinobot_controller_gennodejs: arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/rule
+arduinobot_controller_genlisp: arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/rule
 
-.PHONY : arduinobot_controller_gennodejs
+.PHONY : arduinobot_controller_genlisp
 
 # fast build rule for target.
-arduinobot_controller_gennodejs/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_gennodejs.dir/build
-.PHONY : arduinobot_controller_gennodejs/fast
-
-# Convenience name for target.
-arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
-.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
-
-# Convenience name for target.
-arduinobot_controller_geneus: arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
-
-.PHONY : arduinobot_controller_geneus
-
-# fast build rule for target.
-arduinobot_controller_geneus/fast:
-	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/build
-.PHONY : arduinobot_controller_geneus/fast
+arduinobot_controller_genlisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_genlisp.dir/build
+.PHONY : arduinobot_controller_genlisp/fast
 
 # Convenience name for target.
 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
@@ -648,6 +318,21 @@ controller_manager_msgs_generate_messages_py/fast:
 .PHONY : controller_manager_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_generate_messages: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/rule
+
+.PHONY : arduinobot_controller_generate_messages
+
+# fast build rule for target.
+arduinobot_controller_generate_messages/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages.dir/build
+.PHONY : arduinobot_controller_generate_messages/fast
+
+# Convenience name for target.
 arduinobot_controller/CMakeFiles/_arduinobot_controller_generate_messages_check_deps_AnglesConverter.dir/rule:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/_arduinobot_controller_generate_messages_check_deps_AnglesConverter.dir/rule
 .PHONY : arduinobot_controller/CMakeFiles/_arduinobot_controller_generate_messages_check_deps_AnglesConverter.dir/rule
@@ -663,6 +348,21 @@ _arduinobot_controller_generate_messages_check_deps_AnglesConverter/fast:
 .PHONY : _arduinobot_controller_generate_messages_check_deps_AnglesConverter/fast
 
 # Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_gencpp: arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/rule
+
+.PHONY : arduinobot_controller_gencpp
+
+# fast build rule for target.
+arduinobot_controller_gencpp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_gencpp.dir/build
+.PHONY : arduinobot_controller_gencpp/fast
+
+# Convenience name for target.
 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_eus.dir/rule:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_eus.dir/rule
 .PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_eus.dir/rule
@@ -676,6 +376,81 @@ arduinobot_controller_generate_messages_eus: arduinobot_controller/CMakeFiles/ar
 arduinobot_controller_generate_messages_eus/fast:
 	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_eus.dir/build
 .PHONY : arduinobot_controller_generate_messages_eus/fast
+
+# Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_generate_messages_nodejs: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/rule
+
+.PHONY : arduinobot_controller_generate_messages_nodejs
+
+# fast build rule for target.
+arduinobot_controller_generate_messages_nodejs/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_nodejs.dir/build
+.PHONY : arduinobot_controller_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_eus: arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_eus
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_eus/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make arduinobot_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+.PHONY : controller_manager_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_generate_messages_cpp: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/rule
+
+.PHONY : arduinobot_controller_generate_messages_cpp
+
+# fast build rule for target.
+arduinobot_controller_generate_messages_cpp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_cpp.dir/build
+.PHONY : arduinobot_controller_generate_messages_cpp/fast
+
+# Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_geneus: arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/rule
+
+.PHONY : arduinobot_controller_geneus
+
+# fast build rule for target.
+arduinobot_controller_geneus/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_geneus.dir/build
+.PHONY : arduinobot_controller_geneus/fast
+
+# Convenience name for target.
+arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
+.PHONY : arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+arduinobot_controller_generate_messages_lisp: arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/rule
+
+.PHONY : arduinobot_controller_generate_messages_lisp
+
+# fast build rule for target.
+arduinobot_controller_generate_messages_lisp/fast:
+	cd /home/ahmed/projects/manipulator_robot/arduinobot_ws/build && $(MAKE) -f arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/build.make arduinobot_controller/CMakeFiles/arduinobot_controller_generate_messages_lisp.dir/build
+.PHONY : arduinobot_controller_generate_messages_lisp/fast
 
 src/angles_converter.o: src/angles_converter.cpp.o
 
@@ -737,47 +512,32 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... arduinobot_interface_node"
 	@echo "... angles_converter"
 	@echo "... arduinobot_controller_genpy"
 	@echo "... arduinobot_controller_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... arduinobot_controller_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... arduinobot_controller_gencpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_lisp"
-	@echo "... rebuild_cache"
-	@echo "... arduinobot_controller_generate_messages"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... arduinobot_controller_genlisp"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... install"
-	@echo "... controller_manager_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... controller_manager_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... arduinobot_controller_generate_messages_cpp"
-	@echo "... test"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... arduinobot_controller_generate_messages_nodejs"
-	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... arduinobot_controller_gennodejs"
-	@echo "... arduinobot_controller_geneus"
+	@echo "... controller_manager_msgs_generate_messages_cpp"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
+	@echo "... arduinobot_controller_genlisp"
 	@echo "... controller_manager_msgs_generate_messages_py"
+	@echo "... install/strip"
+	@echo "... arduinobot_controller_generate_messages"
 	@echo "... _arduinobot_controller_generate_messages_check_deps_AnglesConverter"
+	@echo "... arduinobot_controller_gencpp"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... arduinobot_controller_generate_messages_eus"
+	@echo "... arduinobot_controller_generate_messages_nodejs"
+	@echo "... controller_manager_msgs_generate_messages_eus"
+	@echo "... arduinobot_controller_generate_messages_cpp"
+	@echo "... arduinobot_controller_geneus"
+	@echo "... arduinobot_controller_generate_messages_lisp"
 	@echo "... src/angles_converter.o"
 	@echo "... src/angles_converter.i"
 	@echo "... src/angles_converter.s"
