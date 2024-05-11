@@ -1,7 +1,7 @@
 #include "ros/ros.h"
-#include <actionlib/server/action_server.h>
-#include "arduinobot_remote/ArduinobotTaskAction.h"
+#include <actionlib/server/simple_action_server.h>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include "arduinobot_remote/ArduinobotTaskAction.h"
 #include <vector>
 
 class TaskServer
@@ -14,7 +14,7 @@ public:
     {
         as_.start();
     }
-    void excuteCB(const arduinobot_remote::ArduinobotTaskGoalConstPtr &goal)
+    void excuteCB(const arduinobot_remote::ArduinobotTaskActionConstPtr &goal)
     {
         bool success = true;
 
@@ -26,8 +26,8 @@ public:
 
         else if (goal->task_number == 1)
         {
-            ardGoal_ = {-1.14, -0.5, -0.7};
-            grippperGoal_ = {0.0, 0.0};
+            armGoal_ = {-1.14, -0.5, -0.7};
+            gripperGoal_ = {0.0, 0.0};
         }
 
         else if (goal->task_number == 2)
