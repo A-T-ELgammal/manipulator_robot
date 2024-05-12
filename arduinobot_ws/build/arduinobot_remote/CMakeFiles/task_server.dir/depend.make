@@ -5,6 +5,9 @@ arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskActionFeedback.h
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskActionGoal.h
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskActionResult.h
+arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskFeedback.h
+arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskGoal.h
+arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/include/arduinobot_remote/ArduinobotTaskResult.h
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /home/ahmed/projects/manipulator_robot/arduinobot_ws/src/arduinobot_remote/src/task_server.cpp
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /opt/ros/noetic/include/actionlib/action_definition.h
 arduinobot_remote/CMakeFiles/task_server.dir/src/task_server.cpp.o: /opt/ros/noetic/include/actionlib/client/action_client.h

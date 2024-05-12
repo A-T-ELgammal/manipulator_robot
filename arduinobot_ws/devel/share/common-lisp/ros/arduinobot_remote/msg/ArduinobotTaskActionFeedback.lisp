@@ -7,11 +7,21 @@
 ;//! \htmlinclude ArduinobotTaskActionFeedback.msg.html
 
 (cl:defclass <ArduinobotTaskActionFeedback> (roslisp-msg-protocol:ros-message)
-  ((percentage
-    :reader percentage
-    :initarg :percentage
-    :type cl:integer
-    :initform 0))
+  ((header
+    :reader header
+    :initarg :header
+    :type std_msgs-msg:Header
+    :initform (cl:make-instance 'std_msgs-msg:Header))
+   (status
+    :reader status
+    :initarg :status
+    :type actionlib_msgs-msg:GoalStatus
+    :initform (cl:make-instance 'actionlib_msgs-msg:GoalStatus))
+   (feedback
+    :reader feedback
+    :initarg :feedback
+    :type arduinobot_remote-msg:ArduinobotTaskFeedback
+    :initform (cl:make-instance 'arduinobot_remote-msg:ArduinobotTaskFeedback)))
 )
 
 (cl:defclass ArduinobotTaskActionFeedback (<ArduinobotTaskActionFeedback>)
@@ -22,35 +32,31 @@
   (cl:unless (cl:typep m 'ArduinobotTaskActionFeedback)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name arduinobot_remote-msg:<ArduinobotTaskActionFeedback> is deprecated: use arduinobot_remote-msg:ArduinobotTaskActionFeedback instead.")))
 
-(cl:ensure-generic-function 'percentage-val :lambda-list '(m))
-(cl:defmethod percentage-val ((m <ArduinobotTaskActionFeedback>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_remote-msg:percentage-val is deprecated.  Use arduinobot_remote-msg:percentage instead.")
-  (percentage m))
+(cl:ensure-generic-function 'header-val :lambda-list '(m))
+(cl:defmethod header-val ((m <ArduinobotTaskActionFeedback>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_remote-msg:header-val is deprecated.  Use arduinobot_remote-msg:header instead.")
+  (header m))
+
+(cl:ensure-generic-function 'status-val :lambda-list '(m))
+(cl:defmethod status-val ((m <ArduinobotTaskActionFeedback>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_remote-msg:status-val is deprecated.  Use arduinobot_remote-msg:status instead.")
+  (status m))
+
+(cl:ensure-generic-function 'feedback-val :lambda-list '(m))
+(cl:defmethod feedback-val ((m <ArduinobotTaskActionFeedback>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader arduinobot_remote-msg:feedback-val is deprecated.  Use arduinobot_remote-msg:feedback instead.")
+  (feedback m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <ArduinobotTaskActionFeedback>) ostream)
   "Serializes a message object of type '<ArduinobotTaskActionFeedback>"
-  (cl:let* ((signed (cl:slot-value msg 'percentage)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
-    )
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'header) ostream)
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'status) ostream)
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'feedback) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <ArduinobotTaskActionFeedback>) istream)
   "Deserializes a message object of type '<ArduinobotTaskActionFeedback>"
-    (cl:let ((unsigned 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'percentage) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'header) istream)
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'status) istream)
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'feedback) istream)
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<ArduinobotTaskActionFeedback>)))
@@ -61,22 +67,26 @@
   "arduinobot_remote/ArduinobotTaskActionFeedback")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<ArduinobotTaskActionFeedback>)))
   "Returns md5sum for a message object of type '<ArduinobotTaskActionFeedback>"
-  "face31f38d20abbde445df7aa912bb07")
+  "6ac78f399f3b6e443a59e153edcfc710")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'ArduinobotTaskActionFeedback)))
   "Returns md5sum for a message object of type 'ArduinobotTaskActionFeedback"
-  "face31f38d20abbde445df7aa912bb07")
+  "6ac78f399f3b6e443a59e153edcfc710")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<ArduinobotTaskActionFeedback>)))
   "Returns full string definition for message of type '<ArduinobotTaskActionFeedback>"
-  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%# Feedback~%int64 percentage~%~%~%~%"))
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%~%Header header~%actionlib_msgs/GoalStatus status~%ArduinobotTaskFeedback feedback~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%================================================================================~%MSG: actionlib_msgs/GoalStatus~%GoalID goal_id~%uint8 status~%uint8 PENDING         = 0   # The goal has yet to be processed by the action server~%uint8 ACTIVE          = 1   # The goal is currently being processed by the action server~%uint8 PREEMPTED       = 2   # The goal received a cancel request after it started executing~%                            #   and has since completed its execution (Terminal State)~%uint8 SUCCEEDED       = 3   # The goal was achieved successfully by the action server (Terminal State)~%uint8 ABORTED         = 4   # The goal was aborted during execution by the action server due~%                            #    to some failure (Terminal State)~%uint8 REJECTED        = 5   # The goal was rejected by the action server without being processed,~%                            #    because the goal was unattainable or invalid (Terminal State)~%uint8 PREEMPTING      = 6   # The goal received a cancel request after it started executing~%                            #    and has not yet completed execution~%uint8 RECALLING       = 7   # The goal received a cancel request before it started executing,~%                            #    but the action server has not yet confirmed that the goal is canceled~%uint8 RECALLED        = 8   # The goal received a cancel request before it started executing~%                            #    and was successfully cancelled (Terminal State)~%uint8 LOST            = 9   # An action client can determine that a goal is LOST. This should not be~%                            #    sent over the wire by an action server~%~%#Allow for the user to associate a string with GoalStatus for debugging~%string text~%~%~%================================================================================~%MSG: actionlib_msgs/GoalID~%# The stamp should store the time at which this goal was requested.~%# It is used by an action server when it tries to preempt all~%# goals that were requested before a certain time~%time stamp~%~%# The id provides a way to associate feedback and~%# result message with specific goal requests. The id~%# specified must be unique.~%string id~%~%~%================================================================================~%MSG: arduinobot_remote/ArduinobotTaskFeedback~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%# Feedback~%int64 percentage~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'ArduinobotTaskActionFeedback)))
   "Returns full string definition for message of type 'ArduinobotTaskActionFeedback"
-  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%# Feedback~%int64 percentage~%~%~%~%"))
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%~%Header header~%actionlib_msgs/GoalStatus status~%ArduinobotTaskFeedback feedback~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%================================================================================~%MSG: actionlib_msgs/GoalStatus~%GoalID goal_id~%uint8 status~%uint8 PENDING         = 0   # The goal has yet to be processed by the action server~%uint8 ACTIVE          = 1   # The goal is currently being processed by the action server~%uint8 PREEMPTED       = 2   # The goal received a cancel request after it started executing~%                            #   and has since completed its execution (Terminal State)~%uint8 SUCCEEDED       = 3   # The goal was achieved successfully by the action server (Terminal State)~%uint8 ABORTED         = 4   # The goal was aborted during execution by the action server due~%                            #    to some failure (Terminal State)~%uint8 REJECTED        = 5   # The goal was rejected by the action server without being processed,~%                            #    because the goal was unattainable or invalid (Terminal State)~%uint8 PREEMPTING      = 6   # The goal received a cancel request after it started executing~%                            #    and has not yet completed execution~%uint8 RECALLING       = 7   # The goal received a cancel request before it started executing,~%                            #    but the action server has not yet confirmed that the goal is canceled~%uint8 RECALLED        = 8   # The goal received a cancel request before it started executing~%                            #    and was successfully cancelled (Terminal State)~%uint8 LOST            = 9   # An action client can determine that a goal is LOST. This should not be~%                            #    sent over the wire by an action server~%~%#Allow for the user to associate a string with GoalStatus for debugging~%string text~%~%~%================================================================================~%MSG: actionlib_msgs/GoalID~%# The stamp should store the time at which this goal was requested.~%# It is used by an action server when it tries to preempt all~%# goals that were requested before a certain time~%time stamp~%~%# The id provides a way to associate feedback and~%# result message with specific goal requests. The id~%# specified must be unique.~%string id~%~%~%================================================================================~%MSG: arduinobot_remote/ArduinobotTaskFeedback~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%# Feedback~%int64 percentage~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <ArduinobotTaskActionFeedback>))
   (cl:+ 0
-     8
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'header))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'status))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'feedback))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <ArduinobotTaskActionFeedback>))
   "Converts a ROS message object to a list"
   (cl:list 'ArduinobotTaskActionFeedback
-    (cl:cons ':percentage (percentage msg))
+    (cl:cons ':header (header msg))
+    (cl:cons ':status (status msg))
+    (cl:cons ':feedback (feedback msg))
 ))

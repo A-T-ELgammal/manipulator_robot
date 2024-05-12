@@ -1,4 +1,8 @@
 (cl:in-package arduinobot_remote-msg)
-(cl:export '(PERCENTAGE-VAL
-          PERCENTAGE
+(cl:export '(HEADER-VAL
+          HEADER
+          STATUS-VAL
+          STATUS
+          FEEDBACK-VAL
+          FEEDBACK
 ))

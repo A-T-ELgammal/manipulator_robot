@@ -6,15 +6,25 @@
 
 class TaskServer
 {
+private:
+    ros::NodeHandle nh_;
+    actionlib::SimpleActionServer<arduinobot_remote::ArduinobotTaskAction> actionServer_;
+    std::string actionName_;
+    arduinobot_remote::ArduinobotTaskResult result_;
+    std::vector<double> armGoal_;
+    std::vector<double> gripperGoal_;
+    moveit::planning_interface::MoveGroupInterface armMoveGroup_;
+    moveit::planning_interface::MoveGroupInterface gripperMoveGroup_;
+
 public:
-    TaskServer(std::string name) : as_(nh_, boost::bind(&TaskServer::excuteCB, this, _1), false),
-                                   actionName(name),
+    TaskServer(std::string name) : actionServer_(nh_, name, boost::bind(&TaskServer::excuteCB, this, _1), false),
+                                   actionName_(name),
                                    armMoveGroup_("arduinobot_arm"),
                                    gripperMoveGroup_("arduinobot_hand")
     {
-        as_.start();
+        actionServer_.start();
     }
-    void excuteCB(const arduinobot_remote::ArduinobotTaskActionConstPtr &goal)
+    void excuteCB(const arduinobot_remote::ArduinobotTaskGoalConstPtr &goal)
     {
         bool success = true;
 
@@ -26,7 +36,7 @@ public:
 
         else if (goal->task_number == 1)
         {
-            armGoal_ = {-1.14, -0.5, -0.7};
+            armGoal_ = {-1.14, -0.6, -0.7};
             gripperGoal_ = {0.0, 0.0};
         }
 
@@ -48,10 +58,10 @@ public:
         armMoveGroup_.move();
         gripperMoveGroup_.stop();
 
-        if (as_.isPreemptRequested() || !ros::ok())
+        if (actionServer_.isPreemptRequested() || !ros::ok())
         {
             ROS_INFO("%s: Preempted", actionName_.c_str());
-            as_.setPreempted();
+            actionServer_.setPreempted();
             success = false;
         }
 
@@ -59,19 +69,9 @@ public:
         {
             result_.success = true;
             ROS_INFO("%s: Succeeded", actionName_.c_str());
-            as_.setSucceeded(result_);
+            actionServer_.setSucceeded(result_);
         }
     }
-
-private:
-    ros::NodeHandle nh_;
-    actionlib::SimpleActionServer<arduinobot_remote::ArduinobotTaskAction> actionServer_;
-    std::string actionName_;
-    arduinobot_remote::ArduinobotTaskResult result_;
-    std::vector<double> armGoal_;
-    std::vector<double> gripperGoal_;
-    moveit::planning_interface::MoveGroupInterface armMoveGroup_;
-    moveit::planning_interface::MoveGroupInterface gripperMoveGroup_;
 };
 
 int main(int argc, char **argv)

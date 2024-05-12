@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionAction.lisp"
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionActionFeedback.lisp"
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionActionGoal.lisp"
-  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionActionResult.lisp"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskAction.lisp"
   "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionFeedback.lisp"
   "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionGoal.lisp"
   "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskActionResult.lisp"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskFeedback.lisp"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskGoal.lisp"
+  "/home/ahmed/projects/manipulator_robot/arduinobot_ws/devel/share/common-lisp/ros/arduinobot_remote/msg/ArduinobotTaskResult.lisp"
   "CMakeFiles/arduinobot_remote_generate_messages_lisp"
 )
 

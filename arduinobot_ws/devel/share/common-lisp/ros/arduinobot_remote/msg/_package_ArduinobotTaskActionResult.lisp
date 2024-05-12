@@ -1,4 +1,8 @@
 (cl:in-package arduinobot_remote-msg)
-(cl:export '(SUCCESS-VAL
-          SUCCESS
+(cl:export '(HEADER-VAL
+          HEADER
+          STATUS-VAL
+          STATUS
+          RESULT-VAL
+          RESULT
 ))
