@@ -51,7 +51,7 @@ roslaunch arduinobot_moveit move_group.launch
 roslaunch arduinobot_moveit moveit_rviz.launch
 ```
 ### Output:
-![Alt Text](/robot_moveit.gif)
+![Alt Text](/arduinobot_moveit.gif)
 
 #### 4. Application
 
