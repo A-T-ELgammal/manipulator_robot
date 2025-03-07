@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-        name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-        name: installing ROS Noetic - moveit 
+      - name: installing ROS Noetic - moveit
         run: |
           sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
           sudo apt install curl
@@ -29,10 +28,9 @@ jobs:
           sudo rosdep init
           rosdep update
           sudo apt install ros-noetic-moveit
-      
-        name: run the project tasks
+
+      - name: run the project tasks
         run: |
           cd arduinobot_ws
           catkin_make
           source devel/setup.bash
-
