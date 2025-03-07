@@ -32,5 +32,6 @@ jobs:
       - name: run the project tasks
         run: |
           cd arduinobot_ws
-          catkin_make
+          source /opt/ros/noetic/setup.bash
           source devel/setup.bash
+          catkin_make
