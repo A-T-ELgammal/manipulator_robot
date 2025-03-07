@@ -32,7 +32,7 @@ jobs:
       
         name: run the project tasks
         run: |
-        cd arduinobot_ws
-        catkin_make
-        source devel/setup.bash
+          cd arduinobot_ws
+          catkin_make
+          source devel/setup.bash
 
