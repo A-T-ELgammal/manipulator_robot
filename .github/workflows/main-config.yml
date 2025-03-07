@@ -3,7 +3,9 @@ name: Manipulator_Robot
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+  pull_request:
+    branches: ["main"]
+
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -13,6 +15,9 @@ jobs:
 
       - name: installing ROS Noetic - moveit
         run: |
+          sudo rm etc/apt/sources.list.d/ros-latest.list
+          sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+          sudo apt install curl
           curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
           sudo apt update
           sudo apt install ros-noetic-desktop-full
