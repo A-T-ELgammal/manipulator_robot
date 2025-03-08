@@ -31,13 +31,10 @@ jobs:
            rosdep update
            sudo apt install ros-noetic-moveit
 
-      - name: sourcing ros & workspace
+      - name: building project packages
         run: |
           cd arduinobot_ws
           source /opt/ros/noetic/setup.bash
           source devel/setup.bash
-
-      - name: building project packages
-        run: |
           sudo rm -rf build
           catkin_make
