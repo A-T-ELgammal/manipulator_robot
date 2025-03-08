@@ -1,4 +1,5 @@
 name: Manipulator_Robot
+description: setup ros noetic for ubuntu 20.04, moveit package and building all workspace packages of the project.
 
 on:
   push:
@@ -7,7 +8,7 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  build_project_environement:
     runs-on: ubuntu-20.04
 
     steps:
@@ -30,10 +31,13 @@ jobs:
            rosdep update
            sudo apt install ros-noetic-moveit
 
-      - name: run the project tasks
+      - name: sourcing ros & workspace
         run: |
           cd arduinobot_ws
           source /opt/ros/noetic/setup.bash
           source devel/setup.bash
+
+      - name: building project packages
+        run: |
           sudo rm -rf build
           catkin_make
