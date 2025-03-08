@@ -1,4 +1,5 @@
 # Arduinobot Manipulator 
+[![Manipulator_Robot](https://github.com/A-T-ELgammal/manipulator_robot/actions/workflows/build.yml/badge.svg)](https://github.com/A-T-ELgammal/manipulator_robot/actions/workflows/build.yml)
 
 ## Introduction
 
