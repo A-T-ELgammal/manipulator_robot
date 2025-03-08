@@ -35,4 +35,5 @@ jobs:
           cd arduinobot_ws
           source /opt/ros/noetic/setup.bash
           source devel/setup.bash
+          sudo rm -rf build
           catkin_make
