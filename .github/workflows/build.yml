@@ -1,6 +1,6 @@
 name: Manipulator_Robot
 description: setup ros noetic for ubuntu 20.04, moveit package and building all workspace packages of the project.
-
+run-name: ROS environment & project build
 on:
   push:
     branches: ["main"]
